@@ -38,17 +38,19 @@ result = album_repository.select_all()
 for album in result:
     print(album.__dict__)
 
-results = album_repository.select(album_1)
+results = album_repository.select(album_1.id)
 print(album_1.__dict__)
 
-results = artist_repository.select(artist_1)
+results = artist_repository.select(artist_1.id)
 print(artist_1.__dict__)
 
-# results = artist_repository.get_albums(artist_1)
+results = artist_repository.get_albums(artist_1)
+for r in results:
+    print(r.__dict__)
 # print(artist_1.__dict__)
 
-results = artist_repository.update(artist_3)
-print(artist_3.__dict__)
+# results = artist_repository.update(artist_3)
+# print(artist_3.__dict__)
 
 
 
